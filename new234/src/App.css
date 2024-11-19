@@ -29,7 +29,10 @@ button {
   margin: 2vw;
   border: 3px solid #000;
 }
-
+section button {
+  border-radius: 38%;
+  padding: 4vw;
+}
 button:nth-child(2):hover {
   background-color: #E5B395;
 }

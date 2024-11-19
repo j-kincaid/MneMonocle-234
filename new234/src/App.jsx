@@ -10,7 +10,7 @@ function ProductImage() {
       <>
         <h1>{headline}</h1>
         <h2>{subheading}</h2>
-        <h3>On sale through 2024</h3>
+        <h3>Black Friday sale through 2024!</h3>
         <img
           className='glasses'
           src={productImage}  
@@ -23,6 +23,7 @@ function ProductImage() {
     );
 }
 // END OF PRODUCT IMAGE COMPONENT
+
 
 // PRODUCT BUTTONS COMPONENT
 
@@ -61,6 +62,7 @@ return (
         <button onClick={handleIncrement}>
         Black
         </button>
+    </section>
 
         <button onClick={handleDecrement}>
         Remove
@@ -68,7 +70,6 @@ return (
         <button onClick={handleReset}>
         Reset
         </button>
-    </section>
     </>
   );
 }
@@ -100,6 +101,7 @@ function BracesInAttributes() {
       src={image}
       alt={description}
     />
+    
   );
 }
 
