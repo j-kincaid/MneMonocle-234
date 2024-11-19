@@ -1,26 +1,78 @@
-import { Component, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 // PRODUCT IMAGE COMPONENT
 function ProductImage() {
   const productImage = "https://i.imgur.com/kzefm0d.jpg";
-  const headline = 'MneMonocle. '
-  const subheading = 'Augmented Reality for Aging in Place.'
+  const productImage1 = "https://i.imgur.com/hQyPQg6.png[/img]";
+  const headline = 'MneMonocle.'
+  const subheading = 'Breakthrough Design for Aging in Place.'
   return (
       <>
         <h1>{headline}</h1>
         <h2>{subheading}</h2>
+        <h3>On sale through 2024</h3>
         <img
           className='glasses'
-          src={productImage} 
+          src={productImage}  
+          /> 
+        <img
+          className='glasses'
+          src={productImage1} 
           /> 
       </>
     );
 }
 // END OF PRODUCT IMAGE COMPONENT
 
-// PRODUCT BUTTON COMPONENT
+// PRODUCT BUTTONS COMPONENT
 
-// END OF PRODUCT BUTTON COMPONENT
+function Counter() {
+  const [index, setIndex] = useState(0);
+  // We want State to remember index and setIndex.
+
+  function handleIncrement() {
+    setIndex(index + 1);
+  }
+//           function handleDecrement()
+  function handleDecrement() {
+      if (index > 0)
+      setIndex(index - 1);
+  }
+//           function reset()
+function handleReset() {
+  setIndex(0);
+}
+return (
+  <>
+  <section>
+      <h3>Order Total: ${index * 300}</h3>
+        <button onClick={handleIncrement}>
+        Peach
+        </button>
+        <button onClick={handleIncrement}>
+        Red
+        </button>
+        <button onClick={handleIncrement}>
+        Green
+        </button>
+        <button onClick={handleIncrement}>
+        Silver
+        </button>
+        <button onClick={handleIncrement}>
+        Black
+        </button>
+
+        <button onClick={handleDecrement}>
+        Remove
+        </button>
+        <button onClick={handleReset}>
+        Reset
+        </button>
+    </section>
+    </>
+  );
+}
+// END OF PRODUCT BUTTONS COMPONENT
 
 
 
@@ -53,10 +105,10 @@ function BracesInAttributes() {
 
 // Using curly braces inside an HTML tag
 function BracesInHTML() {
-  const title1 = 'A gallery of images from the History of the MneMonocle'
+  const title1 = 'The Influences Informing the Evolution of the MneMonocle'
   return (
     <>
-    <h1>{title1}.</h1>
+    <h2>{title1}</h2>
     </>
   );
 }
@@ -77,7 +129,6 @@ function InlineStyles() {
   )
 }
 
-// Using curly braces for an object with both a name and a theme
 const visorAR = {
   name: 'Augmentation',
   theme: {
@@ -90,11 +141,10 @@ const visorAR = {
 function CombinedExpressions() {
   const human="https://upload.wikimedia.org/wikipedia/commons/7/7b/Samsung_3D_glasses.jpg"
   const description = "Early visor, image credit: Jiří Sedláček"
-      // src=
-    // alt="
+
   return (
     <div style={visorAR.theme}>
-      <h2>{visorAR.name} features are slowly introduced.</h2>
+      <h2>{visorAR.name} features were introduced over time.</h2>
     <img 
     className="glasses"
     src={human}
@@ -116,14 +166,13 @@ export default function App() {
   return (
     <>
     <ProductImage />
+    <Counter />
       <BracesInHTML />
       <Visor />
       <BracesInAttributes />
       <CombinedExpressions />
       <InlineStyles />
       <visorAR />
-{/* end of gallery */}
-
     </>
   )
 }

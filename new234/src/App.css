@@ -1,19 +1,58 @@
+/* colors
+
+peach #E5B395;
+red #E4395B;
+green #029895;
+grey #E7EEF1;
+yellow #FEEED6;
+
+*/
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  margin: 10%;
-  background-color: #E7EEF1;
+  color: #E7EEF1;
+  background-color: #029895;
   border-radius: 1%;
 }
 body {
   background-color: #000;
 }
 div {
+  width: 90%;
   border-radius: 3px;
 }
+
+button {
+  margin: 2vw;
+  border: 3px solid #000;
+}
+
+button:nth-child(2):hover {
+  background-color: #E5B395;
+}
+
+button:nth-child(3):hover {
+  background-color: #E4395B;
+}
+
+button:nth-child(4):hover {
+  background-color: #029895;
+}
+button:nth-child(5):hover {
+  background-color: #E7EEF1;
+}
+
+button:nth-child(6):hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+
 img {
+  margin: 1vw;
   border-radius: 2px;
   max-width: 350px;
 }
