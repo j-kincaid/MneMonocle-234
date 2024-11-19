@@ -1,6 +1,8 @@
 import { Component, useState } from 'react'
 import './App.css'
-// Assignment # 3
+
+
+// GALLERY COMPONENT
 
 function Visor() {
   return (
@@ -13,8 +15,7 @@ function Visor() {
 }
 
 // Using curly braces for attributes
-
-// I want to be able to see all of the images so I reduced their size. It didn't work to assign maxWidth inline so I put it in index.css
+// I put styles in App.css
 
 function BracesInAttributes() {
   const image = 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Cool_old_eye_glasses_in_New_Orleans.jpg';
@@ -30,14 +31,13 @@ function BracesInAttributes() {
 
 // Using curly braces inside an HTML tag
 function BracesInHTML() {
-  const title1 = 'A gallery of images in the History of the MneMonocle'
+  const title1 = 'A gallery of images from the History of the MneMonocle'
   return (
     <>
     <h1>{title1}.</h1>
     </>
   );
 }
-
 // Using curly braces for in-line CSS
 function InlineStyles() {
   return (
@@ -51,7 +51,6 @@ function InlineStyles() {
       }
     }
     >
-
   </div>
   )
 }
@@ -66,10 +65,11 @@ const visorAR = {
   }
 };
 
-
 function CombinedExpressions() {
-  const human="https://upload.wikimedia.org/wikipedia/commons/0/09/Magic_Leap_No_-_1.jpg"
-  const description = "Augmented reality Magic Leap device, Image credit: KKPCW"
+  const human="https://upload.wikimedia.org/wikipedia/commons/7/7b/Samsung_3D_glasses.jpg"
+  const description = "Early visor, image credit: Jiří Sedláček"
+      // src=
+    // alt="
   return (
     <div style={visorAR.theme}>
       <h2>{visorAR.name} features are slowly introduced.</h2>
@@ -80,12 +80,14 @@ function CombinedExpressions() {
     />
     <img 
     className="visor" 
-    src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Samsung_3D_glasses.jpg"
-    alt="Early visor, image credit: Jiří Sedláček"
+    src="https://upload.wikimedia.org/wikipedia/commons/0/09/Magic_Leap_No_-_1.jpg"
+    alt="Augmented reality Magic Leap device, Image credit: KKPCW"
     />
     </div>
   )
 }
+// END OF GALLERY COMPONENT
+
 
 
 export default function App() {
@@ -97,6 +99,8 @@ export default function App() {
       <CombinedExpressions />
       <InlineStyles />
       <visorAR />
+{/* end of gallery */}
+
     </>
   )
 }
