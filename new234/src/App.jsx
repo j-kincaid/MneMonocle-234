@@ -1,5 +1,27 @@
 import { Component, useState } from 'react'
 import './App.css'
+// PRODUCT IMAGE COMPONENT
+function ProductImage() {
+  const productImage = "https://i.imgur.com/kzefm0d.jpg";
+  const headline = 'MneMonocle. '
+  const subheading = 'Augmented Reality for Aging in Place.'
+  return (
+      <>
+        <h1>{headline}</h1>
+        <h2>{subheading}</h2>
+        <img
+          className='glasses'
+          src={productImage} 
+          /> 
+      </>
+    );
+}
+// END OF PRODUCT IMAGE COMPONENT
+
+// PRODUCT BUTTON COMPONENT
+
+// END OF PRODUCT BUTTON COMPONENT
+
 
 
 // GALLERY COMPONENT
@@ -93,6 +115,7 @@ function CombinedExpressions() {
 export default function App() {
   return (
     <>
+    <ProductImage />
       <BracesInHTML />
       <Visor />
       <BracesInAttributes />
