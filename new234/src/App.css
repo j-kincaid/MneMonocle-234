@@ -29,9 +29,14 @@ button {
   margin: 2vw;
   border: 3px solid #000;
 }
-section button {
+section button,
+button.purple {
   border-radius: 38%;
   padding: 4vw;
+}
+
+button:nth-child(1):hover {
+  background-color: purple;
 }
 button:nth-child(2):hover {
   background-color: #E5B395;

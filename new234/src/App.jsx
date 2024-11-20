@@ -27,6 +27,22 @@ function ProductImage() {
 
 // PRODUCT BUTTONS COMPONENT
 
+// HANDLER EVENT BUTTON COMPONENT
+function PurpleButton() {
+  function handleClick(event) {
+       event.target.disabled = true;
+       event.target.innerText = "Out of stock";
+  }
+  return (
+      <button className='purple' onClick={handleClick}>
+          Purple
+      </button>
+  );
+}
+// END OF HANDLER EVENT BUTTON COMPONENT
+
+// HANDLER COMPONENT
+
 function Counter() {
   const [index, setIndex] = useState(0);
   // We want State to remember index and setIndex.
@@ -47,6 +63,8 @@ return (
   <>
   <section>
       <h3>Order Total: ${index * 300}</h3>
+      
+
         <button onClick={handleIncrement}>
         Peach
         </button>
@@ -169,6 +187,7 @@ export default function App() {
     <>
     <ProductImage />
     <Counter />
+    <PurpleButton />
       <BracesInHTML />
       <Visor />
       <BracesInAttributes />
