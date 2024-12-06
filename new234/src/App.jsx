@@ -166,14 +166,14 @@ function CombinedExpressions() {
     <div style={visorAR.theme}>
       <h2>{visorAR.name} features were introduced over time.</h2>
     <img 
-    className="glasses"
-    src={human}
-    alt={description}
+      className="glasses"
+      src={human}
+      alt={description}
     />
     <img 
-    className="visor" 
-    src="https://upload.wikimedia.org/wikipedia/commons/0/09/Magic_Leap_No_-_1.jpg"
-    alt="Augmented reality Magic Leap device, Image credit: KKPCW"
+      className="visor" 
+      src="https://upload.wikimedia.org/wikipedia/commons/0/09/Magic_Leap_No_-_1.jpg"
+      alt="Augmented reality Magic Leap device, Image credit: KKPCW"
     />
     </div>
   )
@@ -185,9 +185,9 @@ function CombinedExpressions() {
 export default function App() {
   return (
     <>
-    <ProductImage />
-    <Counter />
-    <PurpleButton />
+      <ProductImage />
+      <Counter />
+      <PurpleButton />
       <BracesInHTML />
       <Visor />
       <BracesInAttributes />
